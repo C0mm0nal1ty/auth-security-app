@@ -1,11 +1,15 @@
 //jshint esversion:6
+require('dotenv').config();
+
 const express = require('express');
 const ejs = require('ejs');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const encrypt = require('mongoose-encryption');
-require('dotenv').config();
+// const md5 = require('md5');
+const bcrypt = require('bcrypt');
 const app = express();
+
+const saltRounds = 10;
 
 app.use(express.static("public"));
 app.set('view engine','ejs');
@@ -23,8 +27,7 @@ const userSchema = new mongoose.Schema({
 });
 
 const secret = process.env.SECRET;
-userSchema.plugin(encrypt,
-  {secret: secret, encryptedFields: ['password']});
+
 
 const User = mongoose.model("User",userSchema);
 
@@ -54,24 +57,24 @@ app.post('/register',function(req,res){
         console.log("User exists.");
         res.render("home");
       }else{
-        const newUser = new User({
-          email: username,
-          password: password
-        });
+        bcrypt.hash(password, saltRounds, function(err, hash){
 
+          const newUser = new User({
+            email: username,
+            password: hash
+          });
 
-        newUser.save(function(err){
-          if(err){
-            console.log(err);
-          } else{
-            res.render("secrets");
-          }
+          newUser.save(function(err){
+            if(err){
+              console.log(err);
+            } else{
+              res.render("secrets");
+            }
+          });
         });
       }
     }
   });
-
-
 });
 
 
@@ -84,10 +87,12 @@ app.post('/login',function(req,res){
       console.log(err);
     }else{
       if(foundUser){
-        if(foundUser.password === password){
-          res.render("secrets");
-        }
-      }else{
+        bcrypt.compare(password,foundUser.password,function(err,result){
+          if(result === true){
+            res.render("secrets");
+          }
+        });
+      } else{
         console.log("User not found.");
         res.render("home");
       }

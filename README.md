@@ -1,6 +1,6 @@
 # Applications for Authentication and security
 
-This is an application that includes a variety of authentication and security.
+This is an application that includes a variety of authentication and security features.
 
 
 This application was built with CSS3,HTML5,Javascript, EJS, MongoDB, Mongoose, Lodash, Express.js, Node.js,.
@@ -24,6 +24,10 @@ Back-End
 * [Nodemon](https://nodemon.io/) - Nodemon is a utility that will monitor for any changes in your source and automatically restart your server
 * [mongoose-encryption](https://www.npmjs.com/package/mongoose-encryption) - Simple encryption and authentication for mongoose documents.
 * [dotenv](https://www.npmjs.com/package/dotenv) - Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.
+* [MD5](https://www.npmjs.com/package/md5) - a JavaScript function for hashing messages with MD5.
+* [BCRYPT](https://www.npmjs.com/package/bcrypt) - Lib to help you hash passwords. bcrypt on wikipedia
+
+
 
 ## Versioning
 
