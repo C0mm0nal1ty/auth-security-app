@@ -23,6 +23,7 @@ Back-End
 * [mongoose](https://mongoosejs.com/) - elegant mongodb object modeling for node.js
 * [Nodemon](https://nodemon.io/) - Nodemon is a utility that will monitor for any changes in your source and automatically restart your server
 * [mongoose-encryption](https://www.npmjs.com/package/mongoose-encryption) - Simple encryption and authentication for mongoose documents.
+* [dotenv](https://www.npmjs.com/package/dotenv) - Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.
 
 ## Versioning
 
