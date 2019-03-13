@@ -30,7 +30,7 @@ Back-End
 * [passport-local](https://www.npmjs.com/package/passport-local) - Passport strategy for authenticating with a username and password..
 * [passport-local-mongoose](https://www.npmjs.com/package/passport-local-mongoose) - Passport-Local Mongoose is a Mongoose plugin that simplifies building username and password login with Passport.
 * [express-session](https://www.npmjs.com/package/express-session)
-
+* [OAuth 2.0](http://www.passportjs.org/packages/passport-google-oauth20/) - Passport strategy for authenticating with Google using the OAuth 2.0 API.
 
 
 
