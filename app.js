@@ -7,7 +7,17 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 // const md5 = require('md5');
 const bcrypt = require('bcrypt');
+const passport = require('passport');
+const passportLocal = require('passport-local');
+const passportLocalMongoose = require('passport-local-mongoose');
+const expressSession = require('express-session');
+
+
 const app = express();
+
+
+
+
 
 const saltRounds = 10;
 

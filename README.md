@@ -26,6 +26,11 @@ Back-End
 * [dotenv](https://www.npmjs.com/package/dotenv) - Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env.
 * [MD5](https://www.npmjs.com/package/md5) - a JavaScript function for hashing messages with MD5.
 * [BCRYPT](https://www.npmjs.com/package/bcrypt) - Lib to help you hash passwords. bcrypt on wikipedia
+* [passport](https://www.npmjs.com/package/passport) - Passport is Express-compatible authentication middleware for Node.js.
+* [passport-local](https://www.npmjs.com/package/passport-local) - Passport strategy for authenticating with a username and password..
+* [passport-local-mongoose](https://www.npmjs.com/package/passport-local-mongoose) - Passport-Local Mongoose is a Mongoose plugin that simplifies building username and password login with Passport.
+* [express-session](https://www.npmjs.com/package/express-session)
+
 
 
 
