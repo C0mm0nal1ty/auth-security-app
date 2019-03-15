@@ -32,7 +32,9 @@ Back-End
 * [express-session](https://www.npmjs.com/package/express-session)
 * [OAuth 2.0](http://www.passportjs.org/packages/passport-google-oauth20/) - Passport strategy for authenticating with Google using the OAuth 2.0 API.
 
+#Pending Problems
 
+I had trouble storing both FB and Google of 1 user under the same document. Comparing the userName was my first condition to test that both accounts belonged to the same person but the again, usernames are different among different accounts.
 
 ## Versioning
 
